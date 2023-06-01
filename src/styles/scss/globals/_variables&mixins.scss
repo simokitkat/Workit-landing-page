@@ -1,0 +1,53 @@
+//colors:
+
+$Dark-purple:#24053E;
+$Eucaplyptus: #44FFA1;
+$Davys-Grey: #584D62;
+$White: #FFFFFF;
+$Ghost-White: #FCF8FF;
+
+//Mixins
+
+@mixin HeadingL{
+font-family: 'Fraunces', serif;
+font-style: normal;
+font-weight: 600;
+font-size: 80px;
+line-height: 80px;
+}
+
+@mixin HeadingM{
+font-family: 'Fraunces', serif;
+font-style: normal;
+font-weight: 600;
+font-size: 46px;
+line-height: 64px;
+}
+
+@mixin HeadingS{
+font-family: 'Fraunces', serif;
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 40px;
+}
+
+@mixin BodyText{
+font-family: 'Manrope', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 32px;
+}
+
+@mixin flex-Hbetween-Ycetner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-Hcenter-Ycetner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

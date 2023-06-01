@@ -1,0 +1,164 @@
+@use './globals/index' as *;
+
+/*********
+* Access *
+*********/ 
+
+#access{
+    height: 758px;
+    padding-top: 110px;
+
+    .container{
+        width: 1112px;
+        height: 648px;
+        margin: auto;
+        position: relative;
+
+        .founder{
+            display: block;
+            width: 477px;
+        }
+    }
+}
+
+.access-box{
+    position: absolute;
+    right: 0;
+    top: 173px;
+    width: 730px;
+    height: 413px;
+    background-color: $Dark-purple;
+    color: $White;
+    padding: 64px;
+
+    h2{
+        @include HeadingM;
+    }
+
+    p{
+        @include BodyText;
+        margin: 32px 0;
+    }
+
+    button{
+        @include BodyText;
+        font-weight: 700;
+        display: block;
+        background-color: $Eucaplyptus;
+        color: $Dark-purple;
+        width: 190px;
+        height: 61px;
+        letter-spacing: -0.18px;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover{
+            background-color: $Dark-purple;
+            color: $Eucaplyptus;
+            border: 2px solid $Eucaplyptus;
+        }
+    }
+
+    .patter3{
+        display: block;
+        position: absolute;
+        bottom: -60px;
+        right: 70px;
+        z-index: 3;
+    }
+}
+
+/****************
+* Access Tablet *
+****************/
+
+@media (max-width:1200px){
+    #access{
+        height: 647px;
+        padding-top: 100px;
+    
+        .container{
+            width: 689px;
+            height: 526px;
+    
+            .founder{
+                width: 281px;
+            }
+        }
+    }
+
+    .access-box{
+        width: 514px;
+        height: 375px;
+        padding: 48px 56px 56px;
+        top: 151px;
+    
+        h2{
+            font-size: 40px;
+            line-height: 56px;
+        }
+    
+        p{
+            margin: 24px 0;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    
+        button{
+            width: 172px;
+            height: 55px;
+            font-size: 16px;
+        }
+    
+        .patter3{
+            bottom: -106px;
+            right: 12px;
+        }
+    }
+}
+
+/****************
+* Access Mobile *
+****************/
+
+@media (max-width:740px){
+    #access{
+        height: 703px;
+    
+        .container{
+            width: 343px;
+            height: 603px;
+    
+            .founder{
+                margin: auto;
+            }
+        }
+    }
+
+    .access-box{
+        width: 100%;
+        top: 228px;
+        padding: 32px;
+        text-align: center;
+
+        h2{
+            font-size: 26px;
+            line-height: 48px;
+        }
+
+        p{
+            margin: 16px 0 24px;
+            font-size: 15.7px;
+        }
+
+        button{
+            margin: auto;
+        }
+
+        .patter3{
+            display: none;
+        }
+    }
+}

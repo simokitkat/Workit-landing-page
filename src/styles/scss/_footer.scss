@@ -1,0 +1,47 @@
+@use './globals/index' as *;
+
+/*********
+* Footer *
+*********/ 
+
+footer{
+    height: 272px;
+    padding-top: 60px;
+
+    .container{
+        width: 116px;
+        height: 102px;
+        margin: auto;
+        @include flex-Hbetween-Ycetner;
+        flex-direction: column;
+
+        .socials{
+            width: 100%;
+            @include flex-Hbetween-Ycetner;
+
+            a{
+                svg{
+                    &:hover path{
+                        fill: $Dark-purple
+                    }
+
+                    path{
+                        fill: $Davys-Grey;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/****************
+* Footer Mobile *
+****************/ 
+
+@media (max-width:740px){
+    footer{
+        height: 239px;
+        padding-top: 76px;
+    }
+}

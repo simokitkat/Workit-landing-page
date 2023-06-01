@@ -1,0 +1,158 @@
+@use './globals/index' as *;
+
+/*********
+* HEADER *
+*********/
+
+header{
+    height: 730px;
+    background-image: url('../../assets/images/Rectangle.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-color: $Ghost-White;
+    color: $White;
+    padding: 56px 165px 0;
+    position: relative;
+    overflow-x: hidden;
+
+    nav{
+        height: 35px;
+        @include flex-Hbetween-Ycetner;
+
+        a{
+            display: block;
+            height: 100%;
+            @include BodyText;
+            font-weight: 700;
+            letter-spacing: 0.18px;
+            border-bottom: 3px solid $Eucaplyptus;
+            transition: 0.5s;
+
+            &:hover{
+                color: $Eucaplyptus;
+            }
+        }
+    }
+
+    h1{
+        width: 635px;
+        margin: 55px auto 37px;
+        text-align: center;
+        @include HeadingL;
+        font-size: 70px;
+
+        span{
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: $Eucaplyptus;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    button{
+        display: block;
+        width: 161px;
+        height: 61px;
+        margin: auto;
+        background-color: $Eucaplyptus;
+        color: $Dark-purple;
+        border: none;
+        outline: none;
+        text-align: center;
+        @include BodyText;
+        font-weight: 700;
+        letter-spacing: -0.18px;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover{
+            background-color: $Dark-purple;
+            color: $Eucaplyptus;
+            border: 2px solid $Eucaplyptus;
+        }
+    }
+}
+
+.pattern1{
+    position: absolute;
+    top: 120px;
+    left: -140px;
+    z-index: 2;
+}
+
+.pattern2{
+    position: absolute;
+    top: 315px;
+    right: -50px;
+}
+
+
+/****************
+* HEADER Tablet *
+****************/
+
+@media (max-width:1200px){
+    header{
+        height: 538px;
+        padding: 32px 39.5px 0;
+
+        nav{
+            a{
+               font-size: 16px; 
+            }
+        }
+
+        h1{
+            width: 573px;
+            font-size: 50px;
+            line-height: 60px;
+        }
+
+        button{
+            width: 133px;
+            height: 55px;
+        }
+    }
+
+    .pattern1{
+        top: 72px;
+        left: -226px;
+    }
+
+    .pattern2{
+        top: 253px;
+        right: -95px;
+    }
+}
+
+
+/****************
+* HEADER Mobile *
+****************/
+
+@media (max-width:740px){
+    header{
+        height: 481px;
+        padding: 32px 16px 0;
+
+        h1{
+            width: 343px;
+            font-size: 42px;
+            line-height: 50px;
+            margin: 64px auto 40px;
+        }
+    }
+
+    .pattern1,
+    .pattern2{
+        display: none;
+    }
+}

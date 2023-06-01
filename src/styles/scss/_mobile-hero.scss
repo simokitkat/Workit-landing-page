@@ -1,0 +1,41 @@
+@use './globals/index' as *;
+
+/*************
+* HERO IMAGE *
+*************/ 
+
+.hero{
+    position: absolute;
+    top: 454px;
+    left: 52%;
+    transform: translateX(-384px);
+    width: 767px;
+    height: 441px;
+    z-index: 2;
+}
+
+/********************
+* HERO IMAGE TABLET *
+********************/
+
+@media (max-width:1200px){
+    .hero{
+        width: 514px;
+        height: 296px;
+        transform: translateX(-247px);
+        top: 391px;
+    }
+}
+
+/********************
+* HERO IMAGE MOBILE *
+********************/
+
+@media (max-width:740px){
+    .hero{
+        width: 320px;
+        height: 184px;
+        transform: translateX(-160px);
+        top: 389px;
+    }
+}
